@@ -1,0 +1,273 @@
+INSERT INTO
+    recipes (
+        user_id,
+        title,
+        description,
+        cover_img_src,
+        cuisine_type,
+        dietary_preference,
+        difficulty,
+        is_featured
+    )
+VALUES
+    (
+        1,
+        'Spicy Thai Noodles',
+        'A quick and flavorful noodle dish with a spicy kick.',
+        './assets/images/recipe_thai_noodles.jpg',
+        'Thai',
+        'Vegetarian',
+        'Medium',
+        1
+    ),
+    (
+        2,
+        'Classic Lasagna',
+        'Rich layers of pasta, beef, and cheese baked to perfection.',
+        './assets/images/recipe_lasagna.jpeg',
+        'Italian',
+        'Non-Vegetarian',
+        'Hard',
+        1
+    ),
+    (
+        1,
+        'Avocado Toast',
+        'Simple yet delicious breakfast option with fresh avocado.',
+        './assets/images/recipe_avocado_toast.jpeg',
+        'American',
+        'Vegan',
+        'Easy',
+        0
+    );
+
+INSERT INTO
+    events (
+        title,
+        description,
+        event_date,
+        cover_img_src,
+        location,
+        created_by
+    )
+VALUES
+    (
+        'Italian Cooking Workshop',
+        'Learn to make fresh pasta and sauces like a pro.',
+        '2025-10-05 18:00:00',
+        './assets/images/event_italian_workshop.jpeg',
+        'Culinary Studio, NYC',
+        1
+    ),
+    (
+        'Vegan Baking Class',
+        'Delicious plant-based desserts and breads.',
+        '2025-10-12 15:00:00',
+        './assets/images/event_vegan_baking.jpeg',
+        'Green Kitchen, LA',
+        2
+    ),
+    (
+        'Sushi Making Night',
+        'Master the art of sushi rolling with our chef.',
+        '2025-10-15 17:00:00',
+        './assets/images/event_sushi_making.jpeg',
+        'Sushi Bar, SF',
+        1
+    ),
+    (
+        'French Pastry Workshop',
+        'Learn to bake croissants, eclairs, and more.',
+        '2025-10-20 16:00:00',
+        './assets/images/event_french_pastry.jpeg',
+        "Baker\'s Studio, Boston",
+        2
+    ),
+    (
+        'Mediterranean Feast',
+        'Hands-on cooking class featuring Mediterranean cuisine.',
+        '2025-10-25 18:30:00',
+        './assets/images/event_mediterranean.jpeg',
+        'Culinary Center, Miami',
+        1
+    ),
+    (
+        'Chocolate & Dessert Masterclass',
+        'Explore advanced chocolate and dessert techniques.',
+        '2025-10-30 14:00:00',
+        './assets/images/event_chocolate.jpeg',
+        'Sweet Lab, Chicago',
+        2
+    );
+
+INSERT INTO
+    resources (title, resource_type, file_url)
+VALUES
+    -- 📄 Recipe Cards
+    (
+        'Lasagna Recipe Card',
+        'RecipeCard',
+        './assets/resources/culinary/LASAGNA-recipe-card.pdf'
+    ),
+    (
+        'Vegetarian Stir-Fry Recipe Card',
+        'RecipeCard',
+        './assets/resources/culinary/veg_stir_fry.pdf'
+    ),
+    (
+        'Spaghetti Recipe Card',
+        'RecipeCard',
+        './assets/resources/culinary/spaghetti.pdf'
+    ),
+    (
+        'Pasta Recipe Card',
+        'RecipeCard',
+        './assets/resources/culinary/pasta.pdf'
+    ),
+    (
+        'Hamburger Recipe',
+        'RecipeCard',
+        './assets/resources/culinary/hamburger.pdf'
+    ),
+    -- 📚 Tutorials
+    (
+        'Mastering Knife Skills',
+        'Tutorial',
+        './assets/resources/culinary/mastering_knife_skills.pdf'
+    ),
+    (
+        'Cooking Basics',
+        'Tutorial',
+        './assets/resources/culinary/cooking_basics.pdf'
+    ),
+    (
+        'Fundamentals of Cooking',
+        'Tutorial',
+        './assets/resources/culinary/fundamentals_of_cooking.pdf'
+    ),
+    (
+        'Cooking Demonstration Guide',
+        'Tutorial',
+        './assets/resources/culinary/cooking_demonstration_guide.pdf'
+    ),
+    -- 🖼️ Infographics
+    (
+        'Herbs & Spices Info',
+        'Infographic',
+        './assets/resources/culinary/herbs_spice_info.jpeg'
+    ),
+    (
+        'Spice Elements Set',
+        'Infographic',
+        './assets/resources/culinary/spice_elements_set.jpeg'
+    ),
+    (
+        'Beef Temperature Chart',
+        'Infographic',
+        './assets/resources/culinary/beef_temp_chart.jpeg'
+    ),
+    (
+        'Internal Temperature for Meat',
+        'Infographic',
+        './assets/resources/culinary/internal_temp_for_meat.jpeg'
+    ),
+    (
+        'Safe Internal Temperature Guide',
+        'Infographic',
+        './assets/resources/culinary/safe_internal_temp.pdf'
+    ),
+    -- 🎥 Videos
+    (
+        'How to Make Sushi at Home',
+        'Video',
+        'https://www.youtube.com/embed/joweUxpHaqc?si=x48ZqUpp-WC31bh7'
+    ),
+    (
+        'Kitchen Hacks You Must Know! 16 Quick & Brilliant Tricks That Work Like Magic',
+        'Video',
+        'https://www.youtube.com/embed/-X4TEu5Jb84?si=fRlcJig_HTSJng1r'
+    ),
+    (
+        'Japanese egg soft-boiled omelette rice (omurice) Japanese Street Food in Korea / Korean Street Food',
+        'Video',
+        'https://www.youtube.com/embed/jdK9i6kzbfY?si=r88_LzG0-kUUJWO0'
+    ),
+    (
+        'Every Way To Cook Eggs',
+        'Video',
+        'https://www.youtube.com/embed/b52h7kraC3A?si=cq9VCcnmTcuNGW4e'
+    );
+
+INSERT INTO
+    resources (title, resource_type, file_url, category)
+VALUES
+    -- ☀️ Solar Energy
+    (
+        'Introduction to Solar Power',
+        'Tutorial',
+        './assets/resources/educational/basic_solar_energy.pdf',
+        'Educational'
+    ),
+    (
+        'Solar Panel Installation Guide',
+        'RecipeCard',
+        './assets/resources/educational/solar_installation_guide.pdf',
+        'Educational'
+    ),
+    (
+        'How Solar Panels Work',
+        'Video',
+        'https://www.youtube.com/embed/xKxrkht7CpY?si=rIReUuuKV98hE5IA',
+        'Educational'
+    ),
+    -- 🌬️ Wind Energy
+    (
+        'Wind Energy Explained',
+        'Tutorial',
+        './assets/resources/educational/wind_energy_explained.pdf',
+        'Educational'
+    ),
+    (
+        'Wind Turbine Diagram',
+        'Infographic',
+        './assets/resources/educational/wind_turbine_infographic.jpeg',
+        'Educational'
+    ),
+    (
+        'How Do Wind Turbines Work?',
+        'Video',
+        'https://www.youtube.com/embed/xy9nj94xvKA?si=3UaPJINSoM7bPaxn',
+        'Educational'
+    ),
+    -- 💧 Hydropower
+    (
+        'Hydropower Basics',
+        'Tutorial',
+        './assets/resources/educational/hydropower_basics.pdf',
+        'Educational'
+    ),
+    (
+        'Hydropower Plant Process',
+        'Infographic',
+        './assets/resources/educational/hydropower_process.jpeg',
+        'Educational'
+    ),
+    (
+        'Hydropower 101',
+        'Video',
+        'https://www.youtube.com/embed/q8HmRLCgDAI?si=Cl1iAK_Gqbqf32V5',
+        'Educational'
+    ),
+    -- 🌍 Geothermal
+    (
+        'Geothermal Energy Overview',
+        'Tutorial',
+        './assets/resources/educational/geothermal_overview.pdf',
+        'Educational'
+    ),
+    (
+        'Geothermal Plant Layout',
+        'Infographic',
+        './assets/resources/educational/geothermal_plant.jpeg',
+        'Educational'
+    );
