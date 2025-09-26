@@ -38,11 +38,23 @@ if (!isset($_SESSION)) {
     <section class="about-philosophy">
         <h2>Our Philosophy</h2>
         <p>
-            We believe cooking should be fun, inclusive, and inspiring.
-            Whether you’re a home cook or a professional, FoodFusion provides a space
-            to discover new recipes, exchange ideas, and learn from each other.
+            At <strong>FoodFusion</strong>, we believe cooking should be more than just a
+            daily routine — it should be fun, inclusive, and inspiring. Food is a universal
+            language, and every recipe tells a story worth sharing.
+        </p>
+        <p>
+            Whether you’re a curious beginner, a passionate home cook, or a seasoned
+            professional, our platform provides a welcoming space to discover new dishes,
+            share your culinary experiences, and connect with others who share your love
+            for food.
+        </p>
+        <p>
+            We value creativity, diversity, and collaboration. By blending traditional
+            wisdom with modern techniques, we aim to spark innovation in the kitchen and
+            encourage everyone to express themselves through food.
         </p>
     </section>
+
 
     <!-- Values Section -->
     <section class="about-values">

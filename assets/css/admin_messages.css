@@ -1,0 +1,44 @@
+/* admin_messages.css - specific tweaks for messages page */
+
+.meta {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.table-wrap {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+}
+
+.messages-table td {
+  vertical-align: middle;
+}
+
+.col-actions {
+  white-space: nowrap;
+}
+
+.btn.small {
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  margin-right: 6px;
+}
+
+.btn.small.outline {
+  background: transparent;
+  color: var(--accent-dark);
+  border: 1px solid var(--accent-dark);
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+}

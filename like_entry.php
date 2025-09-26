@@ -5,8 +5,8 @@ if (!isset($_SESSION)) {
 }
 if (isset($_POST['entry_id'])) {
     $entry_id = (int)$_POST['entry_id'];
-    $conn->query("UPDATE community_cookbook SET likes = likes + 1 WHERE entry_id = $entry_id");
-    $result = $conn->query("SELECT likes FROM community_cookbook WHERE entry_id = $entry_id");
+    $conn->query("UPDATE community_cookbook SET claps = claps + 1 WHERE entry_id = $entry_id");
+    $result = $conn->query("SELECT claps FROM community_cookbook WHERE entry_id = $entry_id");
     $row = $result->fetch_assoc();
-    echo $row['likes'];
+    echo $row['claps'];
 }

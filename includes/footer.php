@@ -25,8 +25,8 @@
         <!-- Links -->
         <div class="footer-links">
             <h3>Links</h3>
-            <a href="/privacy.php">Privacy Policy</a>
-            <a href="/terms.php">Terms of Service</a>
+            <a href="privacy.php">Privacy Policy</a>
+            <a href="terms.php">Terms of Service</a>
         </div>
     </div>
 

@@ -271,3 +271,22 @@ VALUES
         './assets/resources/educational/geothermal_plant.jpeg',
         'Educational'
     );
+
+INSERT INTO
+    culinary_trends (title, description, cover_img_src)
+VALUES
+    (
+        'Plant-Based Revolution',
+        'More chefs are embracing plant-based ingredients to create delicious, sustainable meals.',
+        './assets/images/trend_plantbased.jpeg'
+    ),
+    (
+        'Zero-Waste Cooking',
+        'Creative ways to minimize food waste are becoming mainstream in home and professional kitchens.',
+        './assets/images/trend_zerowaste.jpeg'
+    ),
+    (
+        'Global Fusion Flavors',
+        'Chefs are blending cuisines from around the world, creating unique flavor combinations.',
+        './assets/images/trend_fusion.jpeg'
+    );
