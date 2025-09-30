@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Terms & Conditions - FoodFusion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/static_pages.css">
 </head>
@@ -27,7 +28,7 @@
         <h2>Limitations</h2>
         <p>We are not responsible for damages resulting from misuse of the website or third-party content.</p>
     </main>
-
+    <script src="./assets/js/hamburger_menu.js"></script>
     <?php include("./includes/footer.php"); ?>
 </body>
 

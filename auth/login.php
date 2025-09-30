@@ -32,8 +32,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['user_id'] = $user['user_id'];
         $_SESSION['email'] = $user['email'];
+        $_SESSION['is_admin'] = $user['is_admin'];
 
-        header("Location: ../index.php");
+        if ($user['is_admin']) {
+          header("Location: ../admin/index.php");
+        } else {
+          header("Location: ../index.php");
+        }
         exit;
       } else {
         $failed = $user['failed_attempts'] + 1;

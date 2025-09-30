@@ -42,6 +42,29 @@ VALUES
     );
 
 INSERT INTO
+    recipes (
+        user_id,
+        title,
+        description,
+        cover_img_src,
+        cuisine_type,
+        dietary_preference,
+        difficulty,
+        is_featured
+    )
+VALUES
+    (
+        1,
+        'Grilled Veggie Panini',
+        'A warm sandwich loaded with grilled vegetables, melted cheese, and fresh herbs.',
+        './assets/images/recipe_veggie_panini.jpeg',
+        'Italian',
+        'Vegetarian',
+        'Easy',
+        0
+    );
+
+INSERT INTO
     events (
         title,
         description,
@@ -289,4 +312,75 @@ VALUES
         'Global Fusion Flavors',
         'Chefs are blending cuisines from around the world, creating unique flavor combinations.',
         './assets/images/trend_fusion.jpeg'
+    );
+
+INSERT INTO
+    culinary_trends (title, description, cover_img_src)
+VALUES
+    (
+        'Fermentation Revival',
+        'Fermented foods like kimchi, kombucha, and sourdough are gaining popularity for their flavors and health benefits.',
+        './assets/images/trend_fermentation.jpeg'
+    ),
+    (
+        'Comfort Food Reinvented',
+        'Classic comfort dishes are being modernized with gourmet techniques and global influences.',
+        './assets/images/trend_comfortfood.jpeg'
+    ),
+    (
+        'Tech-Driven Kitchens',
+        'Smart appliances and AI-driven cooking tools are transforming how chefs and home cooks prepare meals.',
+        './assets/images/trend_techkitchen.jpeg'
+    );
+
+INSERT INTO
+    community_cookbook (
+        user_id,
+        title,
+        cuisine_type,
+        content,
+        image_url,
+        claps
+    )
+VALUES
+   
+    (
+        1,
+        'Classic Lasagna',
+        'Italian',
+        'Layers of pasta, rich meat sauce, and creamy cheese baked to perfection.',
+        './assets/images/recipe_lasagna.jpeg',
+        20
+    ),
+    (
+        1,
+        'Thai Noodles',
+        'Thai',
+        'Stir-fried noodles with vegetables, peanuts, and authentic Thai spices.',
+        './assets/images/recipe_thai_noodles.jpg',
+        18
+    ),
+    (
+        1,
+        'Veggie Panini',
+        'Mediterranean',
+        'Grilled panini filled with roasted vegetables and mozzarella cheese.',
+        './assets/images/recipe_veggie_panini.jpeg',
+        10
+    ),
+    (
+        1,
+        'Quinoa Salad',
+        'Fusion',
+        'A refreshing quinoa salad with cherry tomatoes, cucumber, and feta.',
+        './assets/images/recipe_quoina.jpg',
+        15
+    ),
+    (
+        1,
+        'Chocolate Lava Cake',
+        'French',
+        'Warm chocolate cake with a gooey molten center, served with ice cream.',
+        './assets/images/lava_cake.jpg',
+        25
     );

@@ -104,6 +104,7 @@ if (isset($_POST['change_password'])) {
 
 <head>
     <title>My Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/profile.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -162,7 +163,7 @@ if (isset($_POST['change_password'])) {
         </script>
         <?php unset($_SESSION['form_response']); ?>
     <?php endif; ?>
-
+    <script src="./assets/js/hamburger_menu.js"></script>
 
 </body>
 

@@ -34,6 +34,7 @@ $infographics = $resources['Infographic'];
 <head>
     <meta charset="UTF-8">
     <title>Educational Resources</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/educational_resources.css">
 </head>
@@ -127,6 +128,7 @@ $infographics = $resources['Infographic'];
         </section>
 
     </main>
+    <script src="./assets/js/hamburger_menu.js"></script>
     <script src="./assets/js/cookie.js"></script>
     <?php include("./includes/footer.php"); ?>
     <?php include("./includes/cookie_consent.php"); ?>

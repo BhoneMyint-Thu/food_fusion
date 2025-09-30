@@ -1,7 +1,8 @@
 <?php
 if (!isset($_SESSION)) {
     session_start();
-}include("./includes/db_connect.php");
+}
+include("./includes/db_connect.php");
 
 $form_response = "";
 
@@ -33,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Contact Us - FoodFusion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/contact.css">
 </head>
@@ -79,6 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
     </section>
+    <script src="./assets/js/hamburger_menu.js"></script>
     <script src="./assets/js/cookie.js"></script>
     <?php include("./includes/footer.php"); ?>
     <?php include("./includes/cookie_consent.php"); ?>

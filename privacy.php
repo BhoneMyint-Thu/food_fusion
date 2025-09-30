@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Privacy Policy - FoodFusion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/static_pages.css">
 </head>
@@ -27,7 +28,7 @@
         <h2>Data Security</h2>
         <p>We implement appropriate measures to protect your data. However, no method of transmission over the Internet is 100% secure.</p>
     </main>
-
+    <script src="./assets/js/hamburger_menu.js"></script>
     <?php include("./includes/footer.php"); ?>
 </body>
 

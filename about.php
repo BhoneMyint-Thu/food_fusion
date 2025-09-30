@@ -10,6 +10,7 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <title>About Us - FoodFusion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/about.css">
 </head>
@@ -100,6 +101,7 @@ if (!isset($_SESSION)) {
             </div>
         </div>
     </section>
+    <script src="./assets/js/hamburger_menu.js"></script>
     <script src="./assets/js/cookie.js"></script>
     <?php include("./includes/footer.php"); ?>
     <?php include("./includes/cookie_consent.php"); ?>

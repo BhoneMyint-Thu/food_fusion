@@ -2,7 +2,6 @@
 include '../includes/db_connect.php';
 session_start();
 
-// --- Auth: require login + admin ---
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../auth/login.php");
     exit;
@@ -49,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $is_featured = isset($_POST['is_featured']) ? 1 : 0;
 
     // Handle optional cover image upload
-    $cover_img_src = $recipe['cover_img_src']; // keep old one
+    $cover_img_src = $recipe['cover_img_src']; 
     if (!empty($_FILES['cover_img']['name'])) {
         $targetDir = "../uploads/";
         if (!is_dir($targetDir)) mkdir($targetDir, 0777, true);
@@ -74,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bind_param("ssssssii", $title, $description, $cuisine, $dietary, $difficulty, $cover_img_src, $is_featured, $recipeId);
 
     if ($stmt->execute()) {
-        $message = "✅ Recipe updated successfully!";
+        $message = "Recipe updated successfully!";
         // refresh data
         $recipe = [
             'title' => $title,
@@ -86,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             'is_featured' => $is_featured,
         ];
     } else {
-        $message = "❌ Error updating recipe: " . $conn->error;
+        $message = "Error updating recipe: " . $conn->error;
     }
 }
 ?>

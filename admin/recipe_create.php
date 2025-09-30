@@ -15,17 +15,31 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Handle cover image upload
     $cover_img_src = null;
+    // if (!empty($_FILES['cover_img']['name'])) {
+    //     $uploadFolder = "../uploads/";
+    //     if (!is_dir($uploadFolder)) mkdir($uploadFolder, 0777, true);
+
+    //     $fileName = time() . "_" . basename($_FILES["cover_img"]["name"]);
+    //     $img_dir = "./uploads/";
+    //     $targetFile = $img_dir . $fileName;
+
+    //     if (move_uploaded_file($_FILES["cover_img"]["tmp_name"], $targetFile)) {
+    //         $cover_img_src = $targetFile;
+    //     }
+    // }
     if (!empty($_FILES['cover_img']['name'])) {
-        $targetDir = "../uploads/";
-        if (!is_dir($targetDir)) mkdir($targetDir, 0777, true);
+        $uploadFolder = __DIR__ . "/../uploads/"; 
+        if (!is_dir($uploadFolder)) mkdir($uploadFolder, 0777, true);
 
         $fileName = time() . "_" . basename($_FILES["cover_img"]["name"]);
-        $targetFile = $targetDir . $fileName;
+        $dbPath = "./uploads/" . $fileName;     
+        $targetFile = $uploadFolder . $fileName;   
 
         if (move_uploaded_file($_FILES["cover_img"]["tmp_name"], $targetFile)) {
-            $cover_img_src = $targetFile;
+            $cover_img_src = $dbPath; 
         }
     }
+
 
     $stmt = $conn->prepare("
         INSERT INTO recipes (user_id, title, description, cuisine_type, dietary_preference, difficulty, cover_img_src, is_featured)
@@ -34,9 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bind_param("issssssi", $user_id, $title, $description, $cuisine, $dietary, $difficulty, $cover_img_src, $is_featured);
 
     if ($stmt->execute()) {
-        $message = "✅ Recipe added successfully!";
+        $message = "Recipe added successfully!";
     } else {
-        $message = "❌ Error: " . $conn->error;
+        $message = "Error: " . $conn->error;
     }
 }
 ?>

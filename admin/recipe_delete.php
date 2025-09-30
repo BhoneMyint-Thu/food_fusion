@@ -1,9 +1,7 @@
 <?php
-// admin/recipe_delete.php
 include '../includes/db_connect.php';
 session_start();
 
-// --- Auth: require login + admin ---
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../auth/login.php");
     exit;
@@ -43,7 +41,6 @@ $delStmt = $conn->prepare("DELETE FROM recipes WHERE recipe_id = ?");
 $delStmt->bind_param("i", $recipeId);
 
 if ($delStmt->execute()) {
-    // Optional: delete cover image file if it exists on server
     $coverPath = $imgRow['cover_img_src'];
     if ($coverPath && file_exists(__DIR__ . '/../' . ltrim($coverPath, './\\/'))) {
         unlink(__DIR__ . '/../' . ltrim($coverPath, './\\/'));

@@ -3,14 +3,12 @@ include './includes/db_connect.php';
 if (!isset($_SESSION)) {
     session_start();
 }
-// Fetch 6 featured recipes
 $recipesSql = "
     SELECT r.recipe_id, r.title, r.description, r.cuisine_type, r.cover_img_src, r.difficulty, r.created_at, u.first_name, u.last_name
     FROM recipes r
     LEFT JOIN users u ON r.user_id = u.user_id
     WHERE r.is_featured = 1
     ORDER BY r.created_at DESC
-    LIMIT 6
 ";
 $recipesResult = $conn->query($recipesSql);
 $recipes = [];
@@ -29,7 +27,7 @@ if ($eventResult && $eventResult->num_rows > 0) {
     }
 }
 // Fetch Culinary Trends
-$trendsSql = "SELECT * FROM culinary_trends ORDER BY created_at DESC LIMIT 3";
+$trendsSql = "SELECT * FROM culinary_trends ORDER BY created_at DESC LIMIT 6";
 $trendResult = $conn->query($trendsSql);
 $trends = [];
 if ($trendResult && $trendResult->num_rows > 0) {
@@ -47,6 +45,7 @@ if ($trendResult && $trendResult->num_rows > 0) {
 <head>
     <meta charset="UTF-8">
     <title>FoodFusion - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/home.css">
 </head>
@@ -168,30 +167,17 @@ if ($trendResult && $trendResult->num_rows > 0) {
                     <button class="prev">&#10094;</button>
                     <button class="next">&#10095;</button>
                 </div>
-
-
             </div>
-
-
         </section>
-
-
-
-
-
-
-
-
-
         <?php include("./includes/footer.php"); ?>
     </div>
     <script src="./assets/js/home.js"></script>
+    <script src="./assets/js/hamburger_menu.js"></script>
     <script src="./assets/js/cookie.js"></script>
 
     <!-- Join Us Modal -->
     <div class="modal-backdrop" id="join-modal">
         <div class="modal">
-            <span class="close-btn" id="close-modal">&times;</span>
             <h2>Join FoodFusion</h2>
             <form method="POST" action="auth/register.php">
                 <div class="form-control">

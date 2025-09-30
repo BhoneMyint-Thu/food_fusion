@@ -1,7 +1,7 @@
 .recipes-hero {
   position: relative;
   height: 70vh;
-  background: url('../images/kitchen_hero_bg.jpg') no-repeat center center/cover;
+  background: url('../images/kitchen_hero_bg.jpg') no-repeat center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
